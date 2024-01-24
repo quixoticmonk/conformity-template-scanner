@@ -22,6 +22,14 @@ inputs:
     required: true
 
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: "composite"
+  steps:
+    - name: Initiate scan
+      run: |
+        python "${{ github.action_path }}/main.py" \
+        --region ${{inputs.conformity_region}} \
+        --api_key ${{inputs.conformity_api_key}} \
+        --template_type ${{inputs.template_type}} \
+        --template_path ${{inputs.template_path}} 
+      shell: bash
     
