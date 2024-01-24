@@ -11,4 +11,4 @@ FROM gcr.io/distroless/python3-debian10
 COPY --from=builder /app /app
 WORKDIR /app
 ENV PYTHONPATH /app
-CMD ["/app/main.py  --region $INPUT_CONFORMITY_REGION --api_key $INPUT_CONFORMITY_API_KEY --template_type $INPUT_TEMPLATE_TYPE --template_path $INPUT_TEMPLATE_PATH " ]
+CMD ["main.py  --region $INPUT_CONFORMITY_REGION --api_key $INPUT_CONFORMITY_API_KEY --template_type $INPUT_TEMPLATE_TYPE --template_path $INPUT_TEMPLATE_PATH " ]
