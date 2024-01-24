@@ -28,7 +28,7 @@ runs:
       shell: bash
       run: |
         python3 -m pip install -r scripts/requirements.txt
-        python3 scripts/tf_scan.py \
+        python3 scripts/main.py \
         --region ${{inputs.conformity_region}} \ 
         --api_key ${{inputs.conformity_api_key}} \ 
         --template_type ${{inputs.template_type}} \ 
