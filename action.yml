@@ -1,0 +1,36 @@
+name: "Conformity Template Scanner"
+author: "Manu Chandrasekhar"
+description: "Scans the infrastructure template using Cloud Conformity template scanner"
+
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  template_type:
+    description: Type of template to scan
+    required: true
+    default: "terraform-template"
+  template_path:
+    description: Path to the template to scan
+    required: true
+  conformity_region:
+    description: Conformity region
+    required: true
+    default: "us-1"
+  conformity_api_key:
+    description: Conformity API key
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: scan
+      shell: bash
+      run: |
+        python3 -m pip install -r scripts/requirements.txt
+        python3 scripts/tf_scan.py \
+        --region ${{inputs.conformity_region}} \ 
+        --api_key ${{inputs.conformity_api_key}} \ 
+        --template_type ${{inputs.template_type}} \ 
+        --template_path ${{inputs.template_path}}
+    
