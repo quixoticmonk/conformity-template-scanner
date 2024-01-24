@@ -5,7 +5,7 @@ A GitHub action to scan your infrastructure templates modelled either in Terrafo
 ## Pre-requisites
 
 - You have a Cloud Conformity API key
-- You know the Cloud conformity region
+- You know the Cloud Conformity region
 
 
 ## Usage
@@ -25,12 +25,12 @@ A GitHub action to scan your infrastructure templates modelled either in Terrafo
 
 ## Input
 
-| Input    | Description |
-| -------- | ------- |
-| conformity_region  | Your Cloud conformity region    |
-| conformity_api_key | Your Cloud conformity API key     |
-| template_type    | Your infrastructure template type    |
-| template_path    | Path of the template to sca     |
+| Input              | Description                       |
+|--------------------|-----------------------------------|
+| conformity_region  | Your Cloud Conformity region      |
+| conformity_api_key | Your Cloud Conformity API key     |
+| template_type      | Your infrastructure template type |
+| template_path      | Path of the template to scan      |
 
 ## Output
 
