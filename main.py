@@ -8,7 +8,7 @@ import requests
 
 @click.command()
 @click.option("--region", default="us-1", help="Conformity region")
-@click.option("--api_key", help="Conformity API key region")
+@click.option("--api_key", help="Conformity API key")
 @click.option("--template_type", default="terraform-template", help="Conformity scanner template type")
 @click.option("--template_path", help="Path to the template")
 def initiate_scan(region, api_key, template_type, template_path):
