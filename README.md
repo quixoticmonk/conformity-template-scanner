@@ -1,0 +1,1 @@
+# conformity-template-scanner
