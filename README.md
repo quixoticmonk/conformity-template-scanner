@@ -1,6 +1,7 @@
 # Conformity Template Scanner
 
-[![OpenSSF Scorecard](htt‌ps://api.securityscorecards.dev/projects/github.com/quixoticmonk/conformity-template-scanner/badge)](htt‌ps://securityscorecards.dev/viewer/?uri=github.com/quixoticmonk/conformity-template-scanner)
+[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/quixoticmonk/conformity-template-scanner/badge)](https://api.securityscorecards.dev/projects/github.com/quixoticmonk/conformity-template-scanner)
+
 
 A GitHub action to scan your infrastructure templates modelled either in Terraform or CloudFormation. The type of resources scanned depends on the currently supported list from Cloud Conformity.
 
